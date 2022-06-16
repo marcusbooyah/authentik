@@ -67,6 +67,7 @@ RUN apt-get update && \
     # Required for bootstrap & healtcheck
     apt-get install -y --no-install-recommends curl runit && \
     pip install --no-cache-dir -r /requirements.txt && \
+    pip install --no-cache-dir django-yugabytedb \
     apt-get remove --purge -y build-essential pkg-config libxmlsec1-dev && \
     apt-get autoremove --purge -y && \
     apt-get clean && \
